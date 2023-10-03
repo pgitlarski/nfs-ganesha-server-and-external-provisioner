@@ -16,7 +16,7 @@
 ARG GANESHA_VERSION=V5.5
 
 
-FROM ghcr.io/kubernetes-sigs/nfs-ganesha:${GANESHA_VERSION}
+FROM ghcr.io/pgitlarski/nfs-ganesha:${GANESHA_VERSION}
 
 ARG binary=nfs-provisioner
 COPY ${binary} /nfs-provisioner
