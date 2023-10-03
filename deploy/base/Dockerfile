@@ -44,6 +44,7 @@ RUN dnf install -y \
 	libnsl2-devel \
 	libntirpc-devel \
 	libuuid-devel \
+	libacl-devel \
 	ninja-build \
 	patch \
 	userspace-rcu-devel \
@@ -79,6 +80,7 @@ RUN microdnf install -y \
 	libnfsidmap \
 	libntirpc \
 	libuuid \
+	libacl-devel \
 	nfs-utils \
 	rpcbind \
 	userspace-rcu \
