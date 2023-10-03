@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Update only after new version of deploy/base/Dockerfile change has built
-ARG GANESHA_VERSION=V5.0
+ARG GANESHA_VERSION=VTEST
 
 
 FROM ghcr.io/kubernetes-sigs/nfs-ganesha:${GANESHA_VERSION}

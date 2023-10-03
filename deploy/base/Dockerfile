@@ -52,8 +52,8 @@ RUN dnf install -y \
 
 # Clone specific version of ganesha
 # Keep version in sync with .github/workflows/docker-build.yml
-ARG GANESHA_VERSION=V5.0
-RUN git clone --branch ${GANESHA_VERSION} --recurse-submodules https://github.com/nfs-ganesha/nfs-ganesha
+ARG GANESHA_VERSION=VTEST
+RUN git clone --branch ${GANESHA_VERSION} --recurse-submodules https://github.com/pgitlarski/nfs-ganesha/
 WORKDIR /nfs-ganesha
 RUN mkdir -p /usr/local \
     && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local \
