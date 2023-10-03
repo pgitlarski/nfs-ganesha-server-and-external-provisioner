@@ -52,13 +52,13 @@ RUN dnf install -y \
 
 # Clone specific version of ganesha
 # Keep version in sync with .github/workflows/docker-build.yml
-ARG GANESHA_VERSION=VTEST
-RUN git clone --branch ${GANESHA_VERSION} --recurse-submodules https://github.com/pgitlarski/nfs-ganesha/
+ARG GANESHA_VERSION=V5.5
+RUN git clone --branch ${GANESHA_VERSION} --recurse-submodules https://github.com/nfs-ganesha/nfs-ganesha
 WORKDIR /nfs-ganesha
 RUN mkdir -p /usr/local \
     && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local \
           -DBUILD_CONFIG=vfs_only -DUSE_FSAL_GLUSTER=OFF -DUSE_FSAL_RGW=OFF \
-          -DUSE_RADOS_RECOV=OFF -DRADOS_URLS=OFF -DUSE_SYSTEM_NTIRPC=OFF \
+          -DUSE_RADOS_RECOV=OFF -DRADOS_URLS=OFF -DUSE_SYSTEM_NTIRPC=ON \
           -G Ninja src/ \
     && sed -i 's|@SYSSTATEDIR@/lib/nfs/ganesha|/export|' src/include/config-h.in.cmake \
 	  && ninja \
