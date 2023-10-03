@@ -51,7 +51,7 @@ RUN dnf install -y \
 
 # Clone specific version of ganesha
 # Keep version in sync with .github/workflows/docker-build.yml
-ARG GANESHA_VERSION=V5.5
+ARG GANESHA_VERSION=V5.4
 RUN git clone --branch ${GANESHA_VERSION} --recurse-submodules https://github.com/nfs-ganesha/nfs-ganesha
 WORKDIR /nfs-ganesha
 RUN mkdir -p /usr/local \
