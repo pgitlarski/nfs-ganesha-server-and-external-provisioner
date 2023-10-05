@@ -12,13 +12,13 @@ To get the Docker image onto the machine where you want to run `nfs-ganesha-serv
 Building the project will only work if the project is in your `GOPATH`. Download the project into your `GOPATH` directory by using `go get` or cloning it manually.
 
 ```
-$ go get github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner
+$ go get github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner
 ```
 
 Now build the project and the Docker image by checking out the latest release and running `make container` in the project directory.
 
 ```
-$ cd $GOPATH/src/github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner
+$ cd $GOPATH/src/github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner
 # Configure the location where the container image should be pushed. 
 # Example REGISTRY="gcr.io/myorg/"
 $ make container

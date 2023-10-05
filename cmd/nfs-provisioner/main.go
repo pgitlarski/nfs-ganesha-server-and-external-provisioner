@@ -22,8 +22,8 @@ import (
 	"time"
 
 	"github.com/golang/glog"
-	"github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner/pkg/server"
-	vol "github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner/pkg/volume"
+	"github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner/pkg/server"
+	vol "github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner/pkg/volume"
 	"github.com/kubernetes-sigs/sig-storage-lib-external-provisioner/controller"
 	"k8s.io/apimachinery/pkg/util/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"

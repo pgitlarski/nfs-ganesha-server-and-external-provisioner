@@ -31,7 +31,7 @@ const (
 	// ExportID = 152 is being reserved
 	// so that 152.152 is not used as filesystem_id in nfs-ganesha export configuration
 	// 152.152 is the default pseudo root filesystem ID
-	// Ref: https://github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner/issues/7
+	// Ref: https://github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner/issues/7
 	ReservedExportID = 152
 )
 
