@@ -1,4 +1,4 @@
-module github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner
+module github.com/pgitlarski/nfs-ganesha-server-and-external-provisioner
 
 go 1.12
 
